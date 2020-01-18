@@ -78,9 +78,6 @@ public class Neural_Network {
         }
     }
 
-
-
-
     private void generate_Neurons() {
         Neuron[] inlet_knots = new Inlet_knot[this.inlet_Neurons_Number];
         for (int i = 0; i < this.inlet_Neurons_Number; i++) {
