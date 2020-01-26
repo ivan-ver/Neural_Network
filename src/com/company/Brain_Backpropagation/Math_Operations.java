@@ -2,7 +2,7 @@ package com.company.Brain_Backpropagation;
 
 public class Math_Operations {
     public static double Sigmoid(double arg){
-        return 1/(1+Math.pow(Math.E,(-1)*arg));
+        return 1/(1+Math.exp(-1.0*arg));
     }
 
     public static double DerivativeSigmoid(double arg){

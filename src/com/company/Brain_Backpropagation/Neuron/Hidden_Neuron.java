@@ -5,20 +5,15 @@ import com.company.Brain_Backpropagation.Math_Operations;
 public class Hidden_Neuron implements Neuron {
     private Neuron[] previous_Layer;
     private double[] weights;
-    private double signal = 0;
-    private double error = 0;
+    private double signal = 0.0;
+    private double error = 0.0;
 
-    public Hidden_Neuron(int prevLayerNeuronsNumb, Neuron[] previous_Layer) {
-        generateWeights(prevLayerNeuronsNumb);
+    public Hidden_Neuron(Neuron[] previous_Layer) {
         this.previous_Layer = previous_Layer;
-    }
-
-    private void generateWeights(int prevLayerNeuronsNumb){
-        weights = new double[prevLayerNeuronsNumb];
-        for (int i = 0; i < prevLayerNeuronsNumb; i++) {
-            weights[i] = Math.random()*2-1;
+        weights = new double[previous_Layer.length];
+        for (int i = 0; i < previous_Layer.length; i++) {
+            weights[i] = 2 * Math.random() - 1;
         }
-
     }
 
     @Override
