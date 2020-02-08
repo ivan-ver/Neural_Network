@@ -1,4 +1,4 @@
-package com.company.Brain_Backpropagation;
+package com.brain.Brain_Backpropagation;
 
 public class Math_Operations {
     public static double Sigmoid(double arg){
@@ -16,4 +16,6 @@ public class Math_Operations {
         }
         return r/target.length;
     }
+
+
 }

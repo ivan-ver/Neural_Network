@@ -1,20 +1,19 @@
-package com.company.Brain_Backpropagation.Neuron;
+package com.brain.Brain_Backpropagation.Neuron;
 
-public class Displacement_Neuron implements Neuron {
+import java.io.Serializable;
+
+public class Inlet_knot implements Neuron, Serializable {
     private double signal;
 
-    public Displacement_Neuron() {
-        this.signal = 1.0;
+    public Inlet_knot() {
     }
 
-    @Override
     public double get_Signal() {
         return this.signal;
     }
 
-    @Override
     public void set_Signal(double signal) {
-
+        this.signal = signal;
     }
 
     @Override
@@ -31,4 +30,6 @@ public class Displacement_Neuron implements Neuron {
     public void correct_Weights(double learning_Rate) {
 
     }
+
+
 }

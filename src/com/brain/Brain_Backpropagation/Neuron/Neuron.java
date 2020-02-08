@@ -1,4 +1,4 @@
-package com.company.Brain_Backpropagation.Neuron;
+package com.brain.Brain_Backpropagation.Neuron;
 
 public interface Neuron {
     double get_Signal();

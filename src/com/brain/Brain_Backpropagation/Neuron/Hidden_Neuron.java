@@ -1,18 +1,20 @@
-package com.company.Brain_Backpropagation.Neuron;
+package com.brain.Brain_Backpropagation.Neuron;
 
-import com.company.Brain_Backpropagation.Math_Operations;
+import com.brain.Brain_Backpropagation.Math_Operations;
 
-public class Hidden_Neuron implements Neuron {
+import java.io.Serializable;
+
+public class Hidden_Neuron implements Neuron, Serializable {
     private Neuron[] previous_Layer;
     private double[] weights;
-    private double signal = 0.0;
-    private double error = 0.0;
+    private double signal;
+    private double error;
 
     public Hidden_Neuron(Neuron[] previous_Layer) {
         this.previous_Layer = previous_Layer;
         weights = new double[previous_Layer.length];
         for (int i = 0; i < previous_Layer.length; i++) {
-            weights[i] = 2 * Math.random() - 1;
+            weights[i] = Math.random() - 0.5;
         }
     }
 
