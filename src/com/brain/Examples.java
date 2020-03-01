@@ -1,7 +1,7 @@
 package com.brain;
 
 public class Examples {
-    static double[][] train = {
+    public static double[][] train = {
             {2.0,2.0},
             {2.0,3.0},
             {2.0,4.0},
@@ -11,7 +11,7 @@ public class Examples {
             {2.0,8.0},
             {2.0,9.0}
     };
-    static double[][] target = {
+    public static double[][] target = {
             {1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0},
             {0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0},
             {0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0},
@@ -23,19 +23,19 @@ public class Examples {
 
 
     };
-    static double[][] trainXor = {
+    public static double[][] trainXor = {
             {0.0,0.0},
             {0.0,1.0},
             {1.0,0.0},
             {1.0,1.0},
     };
-    static double[][] targetXor = {
+    public static double[][] targetXor = {
             {0.0},
             {1.0},
             {1.0},
             {0.0}
     };
-    static double[][] trainInputs = {
+    public static double[][] trainInputs = {
             {1.0, 1.0, 0.0, 0.0}, //0
             {0.0, 0.0, 0.0, 1.0}, //1
             {0.0, 0.0, 0.0, 0.0}, //2
@@ -43,19 +43,19 @@ public class Examples {
             {1.0, 0.0, 0.0, 0.0}, //4
             {0.0, 0.0, 1.0, 0.0}, //5
             {1.0, 1.0, 1.0, 1.0}, //6
-
+            {1.0, 1.0, 1.0, 0.0}, //7
             {0.0, 1.0, 1.0, 1.0}, //8
             {0.0, 1.0, 0.0, 1.0}, //9
             {1.0, 0.0, 1.0, 1.0}, //10
             {0.0, 1.0, 1.0, 0.0}, //11
-
+            {0.0, 0.0, 1.0, 1.0}, //12
             {0.0, 1.0, 0.0, 0.0}, //13
             {1.0, 1.0, 0.0, 1.0}, //14
-
+            {1.0, 1.0, 0.0, 0.0}, //15
             {0.0, 1.0, 0.0, 0.0}, //16
             {1.0, 1.0, 0.0, 1.0}  //17
     };
-    static double[][] trainOutputs = {
+    public static double[][] trainOutputs = {
             {1.0}, //0
             {1.0}, //1
             {0.0}, //2
@@ -63,30 +63,30 @@ public class Examples {
             {0.0}, //4
             {1.0}, //5
             {0.0}, //6
-
+            {1.0}, //7
             {0.0}, //8
             {1.0}, //9
             {0.0}, //10
             {1.0}, //11
-
+            {0.0}, //12
             {0.0}, //13
             {0.0}, //14
-
+            {1.0}, //15
             {0.0}, //16
             {0.0}  //17
     };
 
-    static double[][] testInput = {
-            {1.0, 1.0, 1.0, 0.0}, //7
-            {0.0, 0.0, 1.0, 1.0}, //12
-            {1.0, 1.0, 0.0, 0.0}, //15
-    };
-
-    static double[][] testOutput = {
-            {1.0}, //7
-            {0.0}, //12
-            {1.0}, //15
-    };
+//    public static double[][] testInput = {
+//
+//
+//
+//    };
+//
+//    public static double[][] testOutput = {
+//
+//
+//
+//    };
 
 //    public static Map<double[][],double[][]> divider(double[][] input, double[][] output, int numb){
 //        Map<double[][],double[][]> result = new HashMap<>();

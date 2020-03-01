@@ -1,19 +1,18 @@
-package com.brain.view.primitives;
+package com.brain.Neural_Network.View.Neuron_view.primitives;
+
+import com.brain.Neural_Network.View.Geometry;
 
 import java.awt.*;
 import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 
-public class SimpleLine extends Line2D{
-    private SimplePoint p1;
-    private SimplePoint p2;
+public class Line extends Line2D{
+    private Point p1;
+    private Point p2;
 
-    private double x0;
-    private double y0;
 
     private Color color;
-
     private float thickness;
 
     public float getThickness() {
@@ -25,16 +24,25 @@ public class SimpleLine extends Line2D{
     }
 
     public Color getColor() {
-        return color;
+        return this.color;
     }
 
-    public SimpleLine(double x1, double y1, double x2, double y2) {
-        this.p1 = new SimplePoint((int)x1,(int)y1);
-        this.p2 = new SimplePoint((int)x2,(int)y2);
-
-        x0 = p1.getX();
-        y0 = p1.getY();
+    public Line(double x1, double y1, double x2, double y2, double weight) {
+        this.p1 = new Point((int)x1 + Geometry.neuron_radius/2,(int)y1 + Geometry.neuron_radius/2);
+        this.p2 = new Point((int)x2 + Geometry.neuron_radius/2,(int)y2 + Geometry.neuron_radius/2);
+        setColorAndThickness(weight);
     }
+
+    public void setColorAndThickness(double weight){
+        if (weight > 0){
+            this.color = Color.BLUE;
+            this.thickness = (float) (6*Math.atan(weight));
+        } else {
+            this.color = Color.RED;
+            this.thickness = (float) (-6*Math.atan(weight));
+        }
+    }
+
 
     @Override
     public double getX1() {
@@ -77,14 +85,6 @@ public class SimpleLine extends Line2D{
         return null;
     }
 
-    public void changeColorAndThickness(){
-
-        float number = (float) (Math.random()*14);
-
-        this.color = number < 7 ? Color.BLUE : Color.RED;
-
-        this.thickness = number;
-    }
 
 
 

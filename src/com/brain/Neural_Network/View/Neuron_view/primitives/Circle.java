@@ -1,21 +1,21 @@
-package com.brain.view.primitives;
+package com.brain.Neural_Network.View.Neuron_view.primitives;
 
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Rectangle2D;
 
-public class SimpleEllipse extends Ellipse2D {
-
+public class Circle extends Ellipse2D {
 
     private double x;
     private double y;
     private double width;
     private double height;
 
-    public SimpleEllipse(double x, double y, double width, double height) {
-        this.x = x;
-        this.y = y;
-        this.width = width;
-        this.height = height;
+
+    public Circle(double x, double y, double radius) {
+        this.x = x - radius/2;
+        this.y = y + radius/2;
+        this.width = radius;
+        this.height = radius;
     }
 
     @Override

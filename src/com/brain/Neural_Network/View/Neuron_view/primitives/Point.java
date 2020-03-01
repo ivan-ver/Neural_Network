@@ -1,12 +1,12 @@
-package com.brain.view.primitives;
+package com.brain.Neural_Network.View.Neuron_view.primitives;
 
 import java.awt.geom.Point2D;
 
-public class SimplePoint extends Point2D {
+public class Point extends Point2D {
     private double x;
     private double y;
 
-    public SimplePoint(double x, double y) {
+    public Point(double x, double y) {
         this.x = x;
         this.y = y;
     }

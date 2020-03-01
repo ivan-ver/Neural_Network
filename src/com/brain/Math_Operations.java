@@ -1,13 +1,6 @@
-package com.brain.Brain_Backpropagation;
+package com.brain;
 
 public class Math_Operations {
-    public static double Sigmoid(double arg){
-        return 1/(1+Math.exp(-1.0*arg));
-    }
-
-    public static double DerivativeSigmoid(double arg){
-        return Sigmoid(arg)*(1-Sigmoid(arg));
-    }
 
     static double mseLoss(double[] target, double[] result){
         double r = 0;
